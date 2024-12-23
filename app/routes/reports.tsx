@@ -1,5 +1,5 @@
 import React from "react";
-
+export const handle = {routeName: "Reports"}
 export default function Reports() {
   return (
     <div className="p-6">

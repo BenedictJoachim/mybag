@@ -8,8 +8,9 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
-import globalStyles from './styles/global.css';
+import './styles/global.css';
 import Header from "./components/layouts/Header";
+import Sidebar from "./components/layouts/Sidebar";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -22,10 +23,6 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
-  {
-    rel: "stylesheet",
-    href: globalStyles,
-  }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -37,9 +34,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        <Header />
-        {children}
+      <body className="flex bg-blue-600">
+        <Sidebar />
+        <div className="flex-1 p-2">
+          <main className="p-2 min-h-screen bg-gray-100 rounded-lg shadow-md">
+            <Header />
+            {children}
+          </main>
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>

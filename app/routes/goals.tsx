@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Button from "../components/atoms/Button";
 import InputField from "../components/atoms/InputField";
 
+export const handle = {routeName: "Financial Goals"};
+
 export default function Goals() {
   const [goals, setGoals] = useState([
     { title: "Vacation Fund", amount: 3000 },

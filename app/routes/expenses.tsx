@@ -25,10 +25,12 @@ export default function Expenses() {
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-xl font-bold">Expenses</h1>
+    <div className="p-6 min-h-screen bg-gray-100">
 
-      <div className="mt-4">
+      <div className="mt-4 p-2 border-2 border-gray-200 rounded-xl">
+      <h1 className="text-xl font-bold mb-2">Expenses</h1>
+      <hr className="bg-gray-500 mb-4" />
+
         {expenses.map((expense, index) => (
           <div
             key={index}
@@ -36,7 +38,7 @@ export default function Expenses() {
           >
             <div>
               <h3 className="text-lg font-semibold">{expense.title}</h3>
-              <p>Amount: ${expense.amount}</p>
+              <p>Amount: Tsh{expense.amount}</p>
               <p>Type: {expense.type}</p>
             </div>
           </div>
