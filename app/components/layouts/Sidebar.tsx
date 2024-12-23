@@ -21,7 +21,7 @@ export default function Sidebar() {
 
   return (
     <div
-      className={`h-screen bg-blue-600 text-white flex flex-col ${
+      className={`min-h-screen bg-blue-600 text-white flex flex-col ${
         isOpen ? "w-64" : "w-20"
       } transition-all duration-300`}
     >

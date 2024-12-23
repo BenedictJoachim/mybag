@@ -21,9 +21,11 @@ export default function Goals() {
 
   return (
     <div className="p-6">
-      <h1 className="text-xl font-bold">Financial Goals</h1>
 
-      <div className="mt-4">
+      <div className="mt-4 p-2 border-2 border-gray-200 rounded-xl">
+      <h1 className="text-xl font-bold">Financial Goals</h1>
+      <hr className="bg-gray-500 mb-4" />
+
         {goals.map((goal, index) => (
           <div
             key={index}
@@ -31,7 +33,7 @@ export default function Goals() {
           >
             <div>
               <h3 className="text-lg font-semibold">{goal.title}</h3>
-              <p>Amount: ${goal.amount}</p>
+              <p>Amount: Tsh{goal.amount}</p>
             </div>
           </div>
         ))}

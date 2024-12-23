@@ -37,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body className="flex bg-blue-600">
         <Sidebar />
         <div className="flex-1 p-2">
-          <main className="p-2 min-h-screen bg-gray-100 rounded-lg shadow-md">
+          <main className="p-2 min-h-screen bg-gray-100 rounded-lg shadow-xl">
             <Header />
             {children}
           </main>
